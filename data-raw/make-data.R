@@ -44,3 +44,8 @@ sales  <- readr::read_csv(file.path(base, "sales.csv"),
                           col_types = readr::cols(sale_date = readr::col_character()))
 stores <- readr::read_csv(file.path(base, "stores.csv"), show_col_types = FALSE)
 usethis::use_data(sales, stores, overwrite = TRUE, compress = "xz")
+
+# Course 2 (missing values). Read with base read.csv so `rating` stays
+# integer; the NAs are intentional and are what the lesson works with.
+feedback <- utils::read.csv(file.path(base, "feedback.csv"))
+usethis::use_data(feedback, overwrite = TRUE, compress = "xz")
