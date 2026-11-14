@@ -133,3 +133,22 @@
 #' }
 #' @source <https://github.com/rsquaredacademy-publications/datasets> (`stores.csv`), CC0-1.0.
 "stores"
+
+#' Bean & Barrel customer feedback (`feedback`)
+#'
+#' One row per customer feedback card collected at a Bean & Barrel store: 108
+#' cards over 20 days of March 2026. The data are kept exactly as published,
+#' including the missing values, and are used in the Course 2 lesson on
+#' missing values. Joins to [stores] on `store_id`.
+#'
+#' @format A data frame with 108 rows and 6 variables:
+#' \describe{
+#'   \item{card_id}{Feedback card, `F-001` to `F-108`.}
+#'   \item{visit_date}{ISO date text, `2026-03-01` to `2026-03-20`.}
+#'   \item{store_id}{Store, `ST-01` to `ST-09`.}
+#'   \item{product}{Cappuccino, Cold Brew, Espresso, Latte or Tea.}
+#'   \item{rating}{Customer rating, 1–5. Missing for 11 cards.}
+#'   \item{spend_usd}{Amount spent on the visit, US dollars. Missing for 7 cards.}
+#' }
+#' @source <https://github.com/rsquaredacademy-publications/datasets> (`feedback.csv`), CC0-1.0.
+"feedback"
